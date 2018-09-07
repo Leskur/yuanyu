@@ -1,0 +1,22 @@
+header .nav{
+    margin-top: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+header .nav-link {
+    margin: 1.75rem 1rem;
+    color: #333;
+
+}
+
+header .nav-link.active{
+    color: #2b94d7;
+}
+
+header .logo {
+    margin-right: 3rem;
+}
+
+header .nav-link {
+    margin: 0 1rem;
+}
