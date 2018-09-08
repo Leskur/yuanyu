@@ -110,6 +110,11 @@ footer .container {
     margin: 75px 0 125px;
 }
 
+.page-container .pagination{
+    margin-top: 145px;
+    margin-bottom: 200px;
+}
+
 /* pagination */
 .page-item {
     margin: 0 14px;
@@ -197,6 +202,76 @@ footer .container {
     font-size: 14px;
     color: #444;
     margin-top: 1rem;
+}
+
+/* example */
+
+.example-list {
+    flex-wrap: wrap;
+}
+
+.example-list .example-list_item {
+    margin-right: 24px;
+    margin-bottom: 40px;
+}
+
+.example-list .example-list_item:hover {
+    text-decoration: none;
+}
+
+.example-list .example-list_item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.example-list .example-img {
+    position: relative;
+    width: 384px;
+    height: 278px;
+    background: center no-repeat;
+    background-size: cover;
+}
+
+.example-list .example-img:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .41);
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.example-list .example-img:after {
+    content: "+";
+    color: #2b94d7;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    bottom: 15px;
+    left: 20px;
+    border: 1px solid #2b94d7;
+    text-align: right;
+    font-size: 43px;
+    font-weight: lighter;
+    line-height: 1em;
+    padding-right: 15px;
+    padding-top: 10px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.example-list .example-list_item:hover .example-img:after,.example-list .example-list_item:hover .example-img:before {
+    opacity: 1;
+}
+
+.example-list .example-title {
+    text-align: center;
+    color: #444;
+    margin-top: 20px;
+}
+
+.example-list .example-list_item:hover .example-title {
+    color: #2b94d7;
 }
 
 /* team detail */
@@ -319,16 +394,19 @@ footer .container {
     background-color: #2b94d7;
     border: none;
 }
-.contact-form-container .form-btn-area button + button{
+
+.contact-form-container .form-btn-area button + button {
     margin-left: 38px;
 }
+
 .contact-form-container .form-btn-area button[type=reset] {
     background-color: #bcbcbc;
 }
 
-.contact-area{
+.contact-area {
     padding: 0 70px;
 }
-.contact-area > div{
-    padding:  0 30px;
+
+.contact-area > div {
+    padding: 0 30px;
 }
