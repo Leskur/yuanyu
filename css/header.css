@@ -1,4 +1,4 @@
-header .nav{
+header .nav {
     margin-top: .5rem;
     margin-bottom: 1.25rem;
 }
@@ -6,10 +6,20 @@ header .nav{
 header .nav-link {
     margin: 1.75rem 1rem;
     color: #333;
-
+    position: relative;
 }
 
-header .nav-link.active{
+header .nav-link.active:after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #2b94d7;
+}
+
+header .nav-link.active, header .nav-link:hover {
     color: #2b94d7;
 }
 

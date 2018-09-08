@@ -1,0 +1,79 @@
+/* color */
+
+.color-333 {
+    color: #333;
+}
+
+.color-888 {
+    color: #888;
+}
+
+.color-999 {
+    color: #999;
+}
+
+.color-444 {
+    color: #444;
+}
+
+/* font size */
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+/* background color */
+
+.bg-f9 {
+    background-color: #f9f9f9;
+}
+
+.bg-32 {
+    background-color: #323232;
+}
+
+/* padding */
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+/* margin */
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+/* text clamp */
+.text-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.text-clamp-2 {
+    -webkit-line-clamp: 3;
+}
+
+.text-clamp-3 {
+    -webkit-line-clamp: 3;
+}
+
+.flex-item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
