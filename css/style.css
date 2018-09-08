@@ -11,6 +11,7 @@ body {
     width: 100%;
     background: no-repeat center;
     background-size: cover;
+    height: 400px;
 }
 
 .btn-more {
