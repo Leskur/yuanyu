@@ -24,8 +24,9 @@ body {
 
 .btn-more:hover {
     text-decoration: none;
-    color: #2b94d7;
+    color: #fff;
     border-color: #2b94d7;
+    background-color: #2b94d7;
 }
 
 /* footer */
@@ -121,7 +122,8 @@ footer .container {
     padding: 0;
     text-align: center;
 }
-.page-link:hover{
+
+.page-link:hover {
     color: #2b94d7;
 }
 
@@ -132,4 +134,29 @@ footer .container {
 
 .page-item:first-child .page-link, .page-item:last-child .page-link {
     border-radius: 0;
+}
+
+.team-list .team-list_item {
+    width: 50%;
+    margin-bottom: 25px;
+}
+
+.team-list .team-content{
+    margin-top: 25px;
+}
+
+.team-list .team-list_item:nth-child(2n+1) {
+    padding-right: 40px;
+}
+.team-list .team-list_item:nth-child(2n) {
+    padding: 0 20px;
+}
+
+.team-list .team-img {
+    width: 187px;
+    height: 216px;
+    background: center no-repeat;
+    background-size: cover;
+    box-shadow: 3px 0 13px 3px rgba(162, 162, 162, .35);
+    margin-right: 2rem;
 }
