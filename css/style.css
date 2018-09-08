@@ -198,3 +198,50 @@ footer .container {
     color: #444;
     margin-top: 1rem;
 }
+
+/* team detail */
+
+.team-detail .team-img {
+    width: 315px;
+    height: auto;
+    margin-right: 76px;
+}
+
+.team-detail .team-name {
+    font-size: 19px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.team-detail .team-content_desc {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #efefef;
+}
+
+.team-detail .team-content_title {
+    font-size: 16px;
+    margin: 25px 0 35px;
+}
+
+/* list footer */
+
+.list-back {
+    border-top: 1px solid #eee;
+    text-align: right;
+    padding-top: 25px;
+}
+
+.list-back a {
+    font-size: 14px;
+    border: 1px solid #dedede;
+    color: #666;
+    padding: 6px .5em;
+    display: inline-block;
+}
+
+.list-back a:hover {
+    text-decoration: none;
+    background-color: #2b94d7;
+    border-color: #2b94d7;
+    color: #fff;
+}

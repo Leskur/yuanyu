@@ -132,33 +132,6 @@
         </div>
 </footer>
 
-<!-- Optional JavaScript -->
-<script src="../js/jquery-3.3.1.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/swiper.min.js"></script>
-<script>
-    $(function () {
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 18,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true
-            },
-        });
-
-        // 带 data-href 的元素点击事件
-        $(document).on('click', '[data-href]', function () {
-            location.href = $(this).attr('data-href')
-        });
-    })
-
-
-</script>
 </body>
 
 </html>
