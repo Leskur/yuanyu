@@ -261,6 +261,24 @@ section {
 }
 
 /* 联系我们 */
+#backup {
+    position: absolute;
+    color: #ffffff;
+    top: -40px;
+    background-color: #323232;
+    width: 80px;
+    height: 80px;
+    left: calc(50% - 40px);
+    text-align: center;
+    line-height: 80px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+#backup .iconfont {
+    font-size: 2rem;
+}
+
 .contact-item {
     width: 300px;
     margin-right: 80px;
