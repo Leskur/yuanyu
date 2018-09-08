@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>源宇节能科技</title>
+    <!--引用百度地图API-->
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/api?v=2.0&ak=LCVzVZCXIj3UlVRWzLYku1CGh0GgRGXF"></script>
 </head>
 
 <body>
@@ -43,7 +46,7 @@
 
     </div>
 </header>
-<div class="banner" style="background-image: url('../imgs/banner_about.jpg')"></div>
+<div class="banner" style="background-image: url('../imgs/banner_contact.jpg')"></div>
 
 
 <div class="container px-0">
@@ -51,8 +54,8 @@
     <!-- navigate -->
     <div class="navigate d-flex">
         <div class="d-flex align-items-center flex-item ">
-            <a href="#" class="navigate-item active">在线留言</a>
-            <a href="#" class="navigate-item">公司地址</a>
+            <a href="#" class="navigate-item">在线留言</a>
+            <a href="#" class="navigate-item active">公司地址</a>
         </div>
 
         <div class="d-flex align-items-center">
@@ -65,59 +68,30 @@
     </div>
 
     <div class="page-container">
-        <div class="color-666 text-center">
-            您希望了解我们更多信息，或想提出任何意见，请准确填写以下资料，我们将尽快作出回复，谢谢！期待你的咨询和宝贵建议！
+
+
+        <!--百度地图容器-->
+        <div style="width:100%;height:550px;font-size:12px" id="map"></div>
+
+        <div class="d-flex justify-content-between contact-area" style="margin-top: 84px;">
+            <div class="flex-item color-888 font-12">
+                <div class="font-16 color-444 mb-3">成都源宇节能科技有限公司</div>
+                <div>地址：四川省成都市武侯区航利中心3栋2单元401</div>
+                <div> 电话：028-65163959</div>
+                <div>邮箱：1373185312@qq.com</div>
+            </div>
+            <div class="flex-item color-888 font-12">
+                <div class="font-16 color-444 mb-3">客户服务</div>
+                <div>联系电话：400-4554554</div>
+                <div>Email：wrudffada@web.net</div>
+            </div>
+            <div class="flex-item color-888 font-12">
+                <div class="font-16 color-444 mb-3">合作服务</div>
+                <div>联系电话：400-4554554</div>
+                <div>Email：wrudffada@web.net
+                </div>
+            </div>
         </div>
-
-        <form class="contact-form-container">
-            <div class="form-item">
-                <div class="w-50 d-flex">
-                    <label class="required">您的名字</label>
-                    <div class="d-flex flex-item pr-3">
-                        <input required>
-                    </div>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="d-flex flex-item pr-3">
-                    <label class="required">您的电话</label>
-                    <div class="flex-item"><input required></div>
-
-                </div>
-                <div class="d-flex flex-item pl-3">
-                    <label>E-main地址</label>
-                    <div class="flex-item"><input></div>
-                </div>
-            </div>
-            <div class="form-item">
-                <label>联系地址</label>
-                <input class="flex-item" required>
-            </div>
-            <div class="form-item">
-                <label class="required">留言内容</label>
-                <div class="flex-item">
-                    <textarea required></textarea>
-                </div>
-            </div>
-            <div class="form-item">
-                <div class="w-50 d-flex">
-                    <label class="required">验证码</label>
-                    <div class="d-flex flex-item pr-3">
-                        <input required>
-                    </div>
-                </div>
-            </div>
-            <div class="form-code d-flex font-14">
-                <div class="color-888 mr-5">输入验证码，不区分大小写</div>
-                <img src="../imgs/code.png">
-                <a href="javascript:void(0)">看不清？换一张</a>
-            </div>
-            <div class="d-flex form-btn-area">
-                <button type="submit">提交</button>
-                <button type="reset">重置</button>
-            </div>
-        </form>
-
     </div>
 </div>
 </div>
@@ -131,4 +105,69 @@
 
 </body>
 
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap() {
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+
+    function createMap() {
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(104.043895, 30.631045), 17);
+    }
+
+    function setMapEvent() {
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+
+    function addClickHandler(target, window) {
+        target.addEventListener("click", function () {
+            target.openInfoWindow(window);
+        });
+    }
+
+    function addMapOverlay() {
+        var markers = [
+            {
+                content: "四川省成都市武侯区航利中心3栋2单元401",
+                title: "源宇节能科技",
+                imageOffset: {width: 0, height: 3},
+                position: {lat: 30.631045, lng: 104.043895}
+            }
+        ];
+        for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+            var marker = new BMap.Marker(point, {
+                icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                    imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                })
+            });
+            var label = new BMap.Label(markers[index].title, {offset: new BMap.Size(25, 5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            addClickHandler(marker, infoWindow);
+            map.addOverlay(marker);
+        }
+        ;
+    }
+
+    //向地图添加控件
+    function addMapControl() {
+        var navControl = new BMap.NavigationControl({anchor: BMAP_ANCHOR_TOP_LEFT, type: 0});
+        map.addControl(navControl);
+    }
+
+    var map;
+    initMap();
+</script>
 </html>

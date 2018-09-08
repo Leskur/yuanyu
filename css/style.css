@@ -325,3 +325,10 @@ footer .container {
 .contact-form-container .form-btn-area button[type=reset] {
     background-color: #bcbcbc;
 }
+
+.contact-area{
+    padding: 0 70px;
+}
+.contact-area > div{
+    padding:  0 30px;
+}
