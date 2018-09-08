@@ -4,6 +4,10 @@
     color: #333;
 }
 
+.color-666 {
+    color: #666;
+}
+
 .color-888 {
     color: #888;
 }
@@ -51,7 +55,9 @@
 }
 
 /* margin */
-
+.mt-40 {
+    margin-top: 40px;
+}
 .mt-60 {
     margin-top: 60px;
 }
@@ -65,7 +71,7 @@
 }
 
 .text-clamp-2 {
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
 }
 
 .text-clamp-3 {

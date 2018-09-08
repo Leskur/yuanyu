@@ -1,0 +1,28 @@
+.news-item {
+    margin-top: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.new-img {
+    width: 264px;
+    height: 198px;
+    background: center no-repeat;
+    background-size: cover;
+}
+
+.new-time {
+    margin: 0 25px;
+}
+
+.new-date {
+    font-size: 36px;
+    color: #2b94d7;
+    margin-top: 1.5rem;
+}
+
+.news-item .btn-more:hover {
+    background-color: #2b94d7;
+    color: #fff;
+    border-color: #2b94d7;
+}

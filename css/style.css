@@ -19,6 +19,7 @@ body {
     color: #888;
     font-size: 12px;
     display: inline-block;
+    transition: all .3s;
 }
 
 .btn-more:hover {
@@ -27,12 +28,108 @@ body {
     border-color: #2b94d7;
 }
 
+/* footer */
 
-footer{
+footer {
     background-color: #272727;
     color: #6a6b6b;
 }
 
-footer .container{
+footer .container {
     height: 40px;
+}
+
+/* navigate */
+
+.navigate {
+    border-bottom: 1px solid #ddd;
+    height: 60px;
+    padding-left: 2rem;
+}
+
+.navigate-item {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 1em;
+    position: relative;
+}
+
+.navigate-item + .navigate-item {
+    margin-left: 30px;
+}
+
+.navigate-item.active {
+    color: #2b94d7;
+
+}
+
+.navigate-item.active:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    background-color: #2b94d7;
+}
+
+.navigate-item:hover {
+    text-decoration: none;
+    color: #2b94d7;
+}
+
+.navigate .breadcrumb {
+    margin-bottom: 0;
+    padding: 0;
+    background: none;
+    align-items: center;
+    font-size: 14px;
+}
+
+.navigate .breadcrumb-item a {
+    color: #2b94d7;
+}
+
+.navigate .breadcrumb-item a:hover {
+    text-decoration: none;
+}
+
+.navigate .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: #888;
+}
+
+.navigate .breadcrumb-item.active {
+    color: #888;
+}
+
+.page-container {
+    margin: 75px 0 125px;
+}
+
+/* pagination */
+.page-item {
+    margin: 0 14px;
+}
+
+.page-link {
+    color: #2b94d7;
+    width: 44px;
+    height: 44px;
+    line-height: 42px;
+    padding: 0;
+    text-align: center;
+}
+.page-link:hover{
+    color: #2b94d7;
+}
+
+.page-item.active .page-link {
+    background-color: #2b94d7;
+    border-color: #2b94d7;
+}
+
+.page-item:first-child .page-link, .page-item:last-child .page-link {
+    border-radius: 0;
 }
