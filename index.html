@@ -217,11 +217,12 @@
     <div class="news">
         <div class="d-flex pt-60">
 
-            <a href="#" class="new-card">
+            <!-- 请设置默认卡片内容-->
+            <a id="newCard" href="#" class="new-card">
                 <div style="background-image: url('imgs/new.png')" class="new-img"></div>
                 <div>
-                    <div class="color-999 font-20 py-3">12-06</div>
-                    <div class="color-888 font-14 text-clamp text-clamp-3">
+                    <div class="new-date color-999 font-20 py-3">12-06</div>
+                    <div class="new-desc color-888 font-14 text-clamp text-clamp-3">
                         商务部网站9月3日消息，9月2日，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，中国商务，中国商务部部里求斯共......
                     </div>
                 </div>
@@ -230,15 +231,16 @@
             <div class="new-list">
                 <ul class="new-item">
                     <li>
-                        <a href="#" class="d-flex align-items-center">
+                        <!-- data-img 设置卡片图片-->
+                        <a href="#" data-img="imgs/new.png" class="d-flex align-items-center">
                             <div class="new-content flex-item">
                                 <div class="new-title">中国-毛里求斯自贸协定谈判结束 系中非首个商签</div>
-                                <div class="color-888 font-14 text-clamp text-clamp-2">
-                                    商务部网站9月3日消息，9月2日，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，中国商务部里求斯共......
+                                <div class="new-desc color-888 font-14 text-clamp text-clamp-2">
+                                    商务部网站9月3日消息，商务部网站9月3日消息，商务部网站9月3日消息，商务部网站9月3日消息，商务部网站9月3日消息。
                                 </div>
                             </div>
                             <div class="color-999">
-                                <div class="font-20 ">12-06</div>
+                                <div class="font-20 new-date ">12-06</div>
                                 <div class="mt-2 new-arrow position-relative text-center">→</div>
                             </div>
 
@@ -248,15 +250,15 @@
 
                 <ul class="new-item">
                     <li>
-                        <a href="#" class="d-flex align-items-center">
+                        <a href="#" data-img="imgs/news.png" class="d-flex align-items-center">
                             <div class="new-content flex-item">
                                 <div class="new-title">中国-毛里求斯自贸协定谈判结束 系中非首个商签</div>
-                                <div class="color-888 font-14 text-clamp text-clamp-2">
-                                    商务部网站9月3日消息，9月2日，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，中国商务部里求斯共......
+                                <div class="new-desc color-888 font-14 text-clamp text-clamp-2">
+                                    中国商务部里求斯共，中国商务部里求斯共，中国商务部里求斯共，中国商务部里求斯共，中国商务部里求斯共，
                                 </div>
                             </div>
                             <div class="color-999">
-                                <div class="font-20 ">12-06</div>
+                                <div class="new-date font-20 ">12-07</div>
                                 <div class="mt-2 new-arrow position-relative text-center">→</div>
                             </div>
 
@@ -266,15 +268,15 @@
 
                 <ul class="new-item">
                     <li>
-                        <a href="#" class="d-flex align-items-center">
+                        <a href="#" data-img="imgs/new.png" class="d-flex align-items-center">
                             <div class="new-content flex-item">
                                 <div class="new-title">中国-毛里求斯自贸协定谈判结束 系中非首个商签</div>
-                                <div class="color-888 font-14 text-clamp text-clamp-2">
-                                    商务部网站9月3日消息，9月2日，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，中国商务部里求斯共......
+                                <div class="new-desc color-888 font-14 text-clamp text-clamp-2">
+                                    在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，在国务院总理李克强和毛里求斯总理贾格纳特共同见证下，
                                 </div>
                             </div>
                             <div class="color-999">
-                                <div class="font-20 ">12-06</div>
+                                <div class="new-date font-20 ">12-08</div>
                                 <div class="mt-2 new-arrow position-relative text-center">→</div>
                             </div>
 
@@ -361,6 +363,23 @@
         $(document).on('click', '[data-href]', function () {
             location.href = $(this).attr('data-href')
         });
+
+
+        // 切换新闻卡片内容
+        $('.new-list').on('mouseenter', '.new-item', function () {
+            const a = this.querySelector('a');
+            const img = a.getAttribute('data-img');
+            const desc = a.querySelector('.new-desc').innerText;
+            const date = a.querySelector('.new-date').innerText;
+            const href = a.getAttribute("href")
+
+            const newCard = document.querySelector("#newCard");
+            newCard.setAttribute('href', href)
+            newCard.querySelector('.new-date').innerText = date
+            newCard.querySelector('.new-desc').innerText = desc
+            newCard.querySelector('.new-img').style.backgroundImage = `url("${img}")`
+
+        })
     })
 
 
