@@ -1,5 +1,5 @@
 body {
-    min-width: 1200px;
+    min-width: 1230px;
 }
 
 header .nav {
@@ -36,7 +36,7 @@ header .nav-link {
 }
 
 .container {
-    width: 1200px !important;
+    width: 1230px !important;
     max-width: inherit !important;
 }
 
