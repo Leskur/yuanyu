@@ -195,11 +195,12 @@ section {
     font-size: 20px;
     padding: 0px 30px;
 }
-.team-item_content .btn-more:hover{
+
+.team-item_content .btn-more:hover {
     border-color: #2b94d7;
 }
 
-/* 咨资讯中心*/
+/* 资讯中心*/
 
 .news a {
     text-decoration: none;
@@ -216,7 +217,12 @@ section {
     height: 300px;
 }
 
-.new-title {
+.new-title, .new-item li {
+
+    color: #666;
+}
+
+.new-item:hover .new-title, .new-item:hover li {
     color: #2b94d7;
 }
 
@@ -225,10 +231,6 @@ section {
     padding: 40px 1rem 40px 40px;
     margin-bottom: 0;
     position: relative;
-}
-
-.new-item li {
-    color: #2b94d7;
 }
 
 .new-item:before {
