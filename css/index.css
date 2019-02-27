@@ -126,7 +126,7 @@ section {
 /* 团队 */
 
 .team {
-    background: repeat-x top url("../imgs/team_banner.jpg");
+    background: repeat-x top url("http://qiniu.scdztlzx.com/yuanyu/images/team_banner.jpg");
     background-size: auto 570px;
 
 }
